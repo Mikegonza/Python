@@ -39,7 +39,6 @@ for x in range(-10, 11):
     if solution_found:
         break  # Exit the outer loop
 
-# If no solution was found, output the message
 if not solution_found:
     print("There is no solution")
 
