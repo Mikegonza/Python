@@ -7,8 +7,8 @@ Then the output is:
 x = 3 , y = 2
 Use this brute force approach:
 For every value of x from -10 to 10
-   For every value of y from -10 to 10
-      Check if the current x and y satisfy both equations. If so, output the solution, and finish.
+For every value of y from -10 to 10
+Check if the current x and y satisfy both equations. If so, output the solution, and finish.
 Ex: If no solution is found, output:
 There is no solution
 Assume the two input equations have no more than one solution.
