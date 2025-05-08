@@ -1,4 +1,4 @@
-'''
+''' #Print statement
 #https://www.youtube.com/watch?v=rfscVS0vtbw&t=5055s&ab_channel=freeCodeCamp.org 
 print("hello world!")
 print("    *")
@@ -102,8 +102,7 @@ print("Roses are " + color)
 print(plural_noun + " are blue")
 print("I love " + celebrity)
 '''
-'''
-#List
+''' #List
 friends= ["kevin","Karen","Luis","Nicole","Jacqueline"]
 #index      0       1        2      3         4
 print(friends)
@@ -115,8 +114,7 @@ print(friends[1:3])# print elements from the specific index but not including th
 friends[1]="Mike"#replace a value inside of the list
 print(friends[1])#print the replace value
 '''
-
-#List functions
+''' #List functions
 lucky_numbers=[4,8,42,23,16,15]
 winners= ["kevin","Karen","Luis","Nicole","Jacqueline"]
 winners.sort() # (sort)put it in alphabetical order
@@ -146,16 +144,153 @@ print(winners.count("Jose")) # count how many times the same value shows in the 
 
 winners.clear() # remove all elements from the a list giving an empty list
 print(winners)
+'''
+''' tuple and funcions
+#tuple we cannot change the value and use () , list use [] and the values ares mutables
+coordinates= (4,5)
+print(coordinates[0])
 
+#functions
+def say_hi():                    #define a function
+    print("this is a function!")
+print("this is the top")        #example of indentation in a function
+say_hi()                         #calling the function
+print("this is the bottom")     #indentation
 
+def parameter_function(name,age):  #Giving parameters to a function
+    print("hello " + name + " you are " + str(age)) #body of the function converting integer into a string value
+parameter_function("Mike",40)     #calling a function and giving the parameter, note:second parameter is a integer
+parameter_function("Nicole",10)
+'''
+''' #Return statement
+def cube(num):
+    return num*num*num
+result= cube(4)
+print(result)
+'''
+'''# if statement and comparisons 
+is_male = True #boolean value
+is_tall = True
 
+if is_male or is_tall:
+    print("You are a male or tall or both")
+elif is_male and not(is_tall):
+    print("you are a short male")
+elif not(is_male) and is_tall:
+    print("you are not a male but tall")
+else:
+    print("You are neither male nor tall")
+#Comparisons operator
+def max_num(num1,num2,num3):
+    if num1>=num2 and num1>= num3:
+        return num1
+    elif num2>=num1 and num2>=num3:
+        return num2
+    else:
+        return num3 
+print(max_num(300,40,5))
+'''
+'''# Advance Calculator with if statements
+num1= float(input("Enter firts number: "))
+op= input("Enter operator (+,-,/,*): ")
+num2= float(input("Enter second number: "))
 
+if op=="+":
+    print(num1 + num2)
+elif op == "-":
+    print(num1 - num2)
+elif op == "/":
+    print(num1 / num2)
+elif op == "*":
+    print(num1 * num2)
+else:
+    print("invalid operator")
+'''
+'''#Dictionaries with strings and integers
+month_Translator_English_To_Spanish={
+    "January": "Enero",
+    "February": "Febrero",
+    "March":"Marzo",
+    "April": "Abril",
+    "May": "Mayo",
+    "June": "Junio",
+    "July": "Julio",
+    "August": "Agosto",
+    "September": "Septiembre",
+    "October": "Octubre",
+    "November": "Noviembre",
+    "December": "Diciembre"
+}
+print(month_Translator_English_To_Spanish["January"])
+print(month_Translator_English_To_Spanish.get("February"))
+print(month_Translator_English_To_Spanish.get("Other"))#for key that is not on the dictionary giving back a none result
+print(month_Translator_English_To_Spanish.get("Other","Not a valid key"))#for key that is not on the dictionary
+#Dictionaries using integers
+month_Number={
+    1:"January",
+    2:"February",
+    3:"March",
+    4:"April",
+    5:"May",
+    6:"June",
+    7:"July",
+    8:"August",
+    9:"September",
+    10:"October",
+    11:"November",
+    12:"December"
+}
+print("The name for the number of the month you entered is:",month_Number[2])
+'''
+'''#while loops
+i= 1        #initialize the variable
+while i<=10:#define the condition for the loop
+    print(i)#action to execute the loop
+    i+=1    #iteration check for the condition
+print("Done with the loop!")#last line after the final iteration of the loop
+'''
+'''#Guessing game
+password="password"
+guess_password=""
+guess_count=0
+guess_limit=3
+out_Of_Guess=False
 
+while guess_password!=password and not (out_Of_Guess):
+    if guess_count < guess_limit:
+        guess_password=input("Enter the password:")
+        guess_count+=1
+    else:
+        out_Of_Guess=True
+if out_Of_Guess:
+    print("Sorry not more chances to guess!")
+else:
+    print("Yay, you guess the password!")
+'''
+'''#for loop
+for letter in "Python is awesome": #print each letter in the string including spaces
+    print(letter)
+    
+pets=["Dog","Cat","Bird"]
+for pet in pets: #print each element of the array of strings
+    print(pet)
 
+brands=["Polo","Adidas","Bose"]
+for index in range(len(brands)): #print each element of the array of strings
+    print(brands[index])
+    
+for index in range(5):#print each number from 0 to 5, not including 5
+    print(index)
 
-
-
-
+for index in range(3,10):#print each number from 3 to 10, not including 10
+    print(index)
+    
+for index in range(5):#printing and pointing the first iteartion 
+    if index==0:
+        print("First Iteration")
+    else:
+        print("Not the first Iteration")
+        '''
 
 
 
