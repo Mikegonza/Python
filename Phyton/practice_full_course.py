@@ -291,24 +291,121 @@ for index in range(5):#printing and pointing the first iteartion
     else:
         print("Not the first Iteration")
 '''
-#exponent function
+'''#exponent function
 def reaise_to_power(base_num, pow_num):
     result=1
     for index in range(pow_num):
         result=result*base_num
     return result
-
 print(reaise_to_power(2,3))
+'''
+'''#2D list and Nested loops
+number_grid=[
+#Col 0 1 2 
+    [1,2,3],#Row0
+    [4,5,6],#Row1
+    [7,8,9],#Row2
+    [0]     #Row3
+]
+print(number_grid[0][0])#print value from row0, column0
+print(number_grid[2][1])#print value from row2, column1
 
+for row in number_grid:#prints all elemnts 
+    print(row)
 
+for row in number_grid:#prints all elements individually
+    for col in row:
+        print(col)
+'''
+'''#Translation English to new language
+def translate(phrase):
+    translation=""
+    for letter in phrase:
+        if letter.lower() in "aeiou":
+            if letter.isupper():
+                translation=translation + "G"
+            else:
+                translation=translation + "g"
+        else:
+            translation=translation +letter
+    return translation
+print(translate(input("Enter a phrase: ")))
+'''
+'''#Try Except
+try:#user enter a value but if the value is not the same type is shows an error
+    value=10/0
+    number = int(input("Enter a number: "))#
+    print(number)
+except ZeroDivisionError as err: 
+    print(err)#print out specific predifined error best practice
+except:
+    print("invalid input!")
+'''
+'''#Reading from files
+#open("WordTextFile1.txt","r")#read only the info on the file
+#open("WordTextFile1.txt","w")#writing in the file modifying content
+#open("WordTextFile1.txt","a")#append add new information in the file
+#open("WordTextFile1.txt","r+")#read and write on the file
+example_file= open("WordTextFile1.txt","r")#passing the value to a variable to open a file with this structure
+print(example_file.readable())#check if the file is available to read returning true if is available
+print(example_file.read())#read and show the content if the file
+print(example_file.readline())#read and show the firts line in the file(if we write two of thus consecutive we get an output line by line)
+print(example_file.readlines())#read all the lines and put in a list
+print(example_file.readline()[1])#shows the content for the firts line by the inex position(line) of the file
+for example in example_file.readlines():#for loop to read a file
+    print(example)
+example_file.close()#close the file
+'''
+'''#Writting to files
+#employee_file = open("F:\Python\Phyton\employees.txt", "r")
+#print(employee_file.read())
+#employee_file.close()
 
+#employee_file = open("F:\Python\Phyton\employees.txt", "a")
+#employee_file.write("Jose-new hiring")#append or add a new data at the end of the file
+#employee_file.close()
 
+#employee_file = open("F:\Python\Phyton\employees.txt", "a")
+#employee_file.write("\nMarcos- Sales")#add a new value at the end of the file with a new line
+#employee_file.close()
 
+#employee_file = open("F:\Python\Phyton\employees.txt", "w")
+#employee_file.write("\nJackie-Boss")#wirte a new value deleting everething else 
+#employee_file.close()
 
+#employee_file = open("F:\Python\Phyton\employees1.txt", "w")#create a new file if the name does not exist
+#employee_file.write("\nMiguel-New Boss")
+#employee_file.close()
+'''
+'''#modules
+#import while_Loops #import the functionality of the program call while_loops
+#print(while_Loops) #print the result of the function in while_loops program
+'''
+'''#classes and objects
+#This is the class Student with the parameters to pass in to the attributes for objects
+class Student:
+    def __init__(self, name, major, gpa, is_on_probation):
+        self.name = name
+        self.major = major
+        self.gpa = gpa
+        self.is_on_probation = is_on_probation
+        
+#This is the object to work in the Student Class assigning attributes
+from Student import Student
 
+student1= Student("Miguel", "Software Eng", 3.5, False)
+student2= Student("Ramon", "System eng", 3.5, True)
 
+print(student1.name)
+print(student1.major)
+print(student1.gpa)
+print(student1.is_on_probation)
 
-
+print(student2.name)
+print(student2.major)
+print(student2.gpa)
+print(student2.is_on_probation)
+'''
 
 
 
