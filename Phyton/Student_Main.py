@@ -2,8 +2,10 @@
 from Student import Student
 
 student1= Student("Miguel", "Software Eng", 3.5, False)
-student2= Student("Ramon", "System eng", 3.5, True)
+student2= Student("Ramon", "System eng", 3.4, True)
 
+print(student1.on_honor_roll())
+print(student2.on_honor_roll())
 
 print(student1.name)
 print(student1.major)
