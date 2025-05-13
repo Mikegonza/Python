@@ -1,3 +1,4 @@
+'''
 species_1 = "Sandhill Crane"
 count_1 = 550
 region_1 = "Midwest"
@@ -16,3 +17,17 @@ print(f"Unusual pattern for {species_2}: {species_2_high}")
 # Expected output:
 # Unusual pattern for Sandhill Crane: False
 # Unusual pattern for Blackpoll Warbler: True
+'''
+def c_to_f():
+    # FIXME
+    return  temp_f# FIXME: Finish
+
+temp_c = float(input('Enter temperature in Celsius: '))
+temp_f = None
+
+# FIXME: Call conversion function
+temp_f = temp_c * (9/5) + 32
+
+# FIXME: Print result
+print('Fahrenheit:' , temp_f)
+ 
