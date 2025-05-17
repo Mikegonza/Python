@@ -65,7 +65,7 @@ width = float(input())
 height = float(input())
 print(f'Volume for {length} {width} {height} is: {calc_pyramid_volume(length, width, height):.2f}')
 '''
-
+'''
 def get_user_num():
    print('FIXME: Finish get_user_num()')
    return -1
@@ -83,3 +83,64 @@ user_num2 = get_user_num()
 avg_result = compute_avg(user_num1, user_num2)
 
 print('Avg:', avg_result)
+'''
+'''
+def calc_ebay_fee(sell_price):
+    """Returns the fees charged by ebay.com given the selling
+    price of fixed-price books, movies, music, or video games.
+    fee is $0.50 to list plus 13% of selling price up to $50.00,
+    5% of amount from $50.01 to $1000.00, and 
+    2% for amount $1000.01 or more."""
+
+    p50 = 0.13  # for amount $50 and lower
+    p50_to_1000 = 0.05  # for $50.01-$1000
+    p1000 = 0.02  # for $1000.01 and higher
+    fee = 0.50  # fee to list item
+
+    if sell_price <= 50:
+        fee  = fee + (sell_price*p50)
+    elif sell_price <= 1000:
+        fee = fee + (50*p50) + ((sell_price-50)*p50_to_1000)
+    else:
+        fee = fee + (50*p50) + ((1000-50)*p50_to_1000) \
+                  + ((sell_price-1000)*p1000)
+
+    return fee
+
+selling_price = float(input('Enter item selling price (ex: 65.00): '))
+print('eBay fee: $', calc_ebay_fee(selling_price))
+
+'''
+
+size = 5
+
+def get_numbers(num):
+    numbers = []
+    user_input = input(f'Enter {num} integers:\n')
+
+    i = 0
+    for token in user_input.split():
+        number = int(token)     # Convert string input into integer
+        numbers.append(number)  # Add to numbers list
+
+        print(i, number)
+        i += 1
+
+    return numbers
+
+def print_all_numbers(numbers):
+    # Print numbers
+    print('Numbers:')
+
+def print_odd_numbers(numbers):
+    # Print all odd numbers
+    print('Odd numbers:')
+
+def print_negative_numbers(numbers):
+    # Print all negative numbers
+    print('Negative numbers:')
+
+nums = get_numbers(size)
+print_all_numbers(nums)
+print_odd_numbers(nums)
+print_negative_numbers(nums)
