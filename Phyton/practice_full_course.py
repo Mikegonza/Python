@@ -439,5 +439,48 @@ class Question:
         self.answer= answer
 '''
 
+#Functions with branches/ loops
+def print_message(message):
+    if len(message) > 6:
+        print('too long')
+    else:
+        print(message)
+
+print_message('How?')
+print_message('How are you today?')
+
+def compute(numbers):
+    result = 0
+    for num in numbers:
+        result += num * 3
+    return result
+
+values = [7, 5, 6]
+computed_value = compute(values)
+print(computed_value)
 
 
+def get_numbers():
+    values = []
+    for count in range(6):
+        values.append(int(input()))
+    return values
+
+def print_selected_numbers():
+    numbers = get_numbers()
+    for number in numbers:
+        if (number % 3) != 0:
+            print(number)
+
+print_selected_numbers()
+
+def print_popcorn_time(bag_ounces):
+    if bag_ounces < 3:
+        print("Too small")
+    elif bag_ounces > 10:
+        print("Too large")
+    else:
+        bag_ounces= bag_ounces * 6
+
+user_ounces = int(input())
+print_popcorn_time(user_ounces)
