@@ -439,7 +439,7 @@ class Question:
         self.answer= answer
 '''
 
-#Functions with branches/ loops
+'''#Functions with branches/ loops
 def print_message(message):
     if len(message) > 6:
         print('too long')
@@ -484,3 +484,82 @@ def print_popcorn_time(bag_ounces):
 
 user_ounces = int(input())
 print_popcorn_time(user_ounces)
+
+'''
+
+'''#problem1
+#Define function print_popcorn_time() with parameter bag_ounces. If bag_ounces is less than 3, print "Too small". 
+# If greater than 10, print "Too large". Otherwise, compute and print 6 * bag_ounces followed by " seconds".
+#Sample output with input: 7   
+# 42 seconds
+
+def print_popcorn_time(bag_ounces):
+    if bag_ounces < 3:
+        print("Too small")
+    elif bag_ounces > 10:
+        print("Too large")
+    else:
+        print(str(6 * bag_ounces) +" seconds")
+
+user_ounces = int(input())
+print_popcorn_time(user_ounces)
+'''
+
+'''#problem2
+#Write a function print_shampoo_instructions() with parameter num_cycles. 
+# If num_cycles is less than 1, print "Too few.". If more than 4, print "Too many.". 
+# Else, print "N : Lather and rinse." num_cycles times, where N is the cycle number, followed by "Done."
+#Sample output with input: 2
+#1 : Lather and rinse.
+#2 : Lather and rinse.
+#Done.
+def print_shampoo_instructions(num_cycles):
+    if num_cycles<1:
+        print("Too few.")
+    elif num_cycles>4:
+        print("Too many.")
+    else:
+        for i in range(1, num_cycles + 1):
+            print(f"{i} : Lather and rinse.")
+        print("Done.")
+
+user_cycles = int(input())
+print_shampoo_instructions(user_cycles)
+'''
+
+'''#Functions can be passed as arguments.
+def print_human_head():
+    print('   ||||| ')
+    print('   o   o')
+    print('     >' )
+    print('   ooooo')
+    return
+
+def print_monkey_head():
+    print('   .-"-.')
+    print(' _/.-.-.\\_')
+    print('( ( o o ) )')
+    print(' |/  "  \\|')
+    print('  \\ .-. /')
+    print('  /`"""`\\')
+    return
+
+def print_figure(face):
+    face()  # Print the face
+    print('     |')
+    print('   --|--')
+    print('  /  |  \\')
+    print('@    |    @')
+    print('     |')
+    print('    /|\\')
+    print('   @   @')
+    return
+
+choice = int(input('Enter "1" to draw monkey, "2" for human: '))
+
+if choice == 1:
+    print_figure(print_monkey_head)
+elif choice == 2:
+    print_figure(print_human_head)
+'''
+
