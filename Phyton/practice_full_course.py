@@ -615,11 +615,11 @@ while command != '4':  # Exit when user enters '4'
     command = input().lower().strip()
 '''
 
+'''
 #Write a function swap that swaps the first and last elements of a list argument.
 
 #Sample output with input: 'all,good,things,must,end,here'
 #['here', 'good', 'things', 'must', 'end', 'all']
-'''
 def swap(lst):
     lst=lst[-1]
     print(lst)
@@ -632,13 +632,4 @@ swap(values_list)
 print(values_list)
 '''
 
-friends= ["kevin","Karen","Luis","Nicole","Jacqueline"]
-#index      0       1        2      3         4
-print(friends)
-print(friends[0])# print the first element of the list
-print(friends[4])# print the last element of the list
-print(friends[-1])# starts indexin from the back of the list
-print(friends[1:])# print elements from the especific index number
-print(friends[1:3])# print elements from the specific index but not including the second index parameter
-friends[1]="Mike"#replace a value inside of the list
-print(friends[1])#print the replace value
+
