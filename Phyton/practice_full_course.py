@@ -633,3 +633,12 @@ print(values_list)
 '''
 
 
+# import math
+# help(math.pow)  # Display the documentation for the math module
+# help(math)  # Display the documentation for the math module
+
+"rounding"
+num=3.14159
+print("%.2f" % num)  # Format the number to 2 decimal places
+print("{:.3f}".format(num))  # Another way to format the number to 3 decimal places
+print("{}".format(round(num, 4)))  # Round the number to 4 decimal places
