@@ -6,6 +6,7 @@
 
 #Given a highway number, indicate whether it is a primary or auxiliary highway. 
 # If auxiliary, indicate what primary highway it serves. Also indicate if the (primary) highway runs north/south or east/west.
+'''Solution 1
 print('Enter a highway number:', end =' ')
 highway_number = int(input())
 
@@ -27,3 +28,27 @@ elif highway_number in invalid_highway_number:
     print(f'{highway_number} is not a valid interstate highway number.')
 else:
     print(f'{highway_number} is not a valid interstate highway number.')
+
+'''
+
+'''#solution 2
+#invalid
+highway_number = int(input())
+if ((highway_number < 1 or highway_number > 999) or (highway_number % 100 == 0)):
+    print(f"{highway_number} is not a valid interstate highway number.")
+#valid
+else:
+    if(highway_number>99):
+        print(f"I-{highway_number} is auxiliary", end='')
+        #get the primary
+        primary_number = highway_number % 100 #get the rigthmost 2 digits
+        print(f", serving I-{primary_number}",end='')
+    else:
+        primary_number = highway_number
+        print(f"I-{primary_number} is primary", end='')
+    #directions
+    if (primary_number % 2 == 0):
+        print(", going east/west.")
+    else:#odd
+        print(", going north/south.")
+'''

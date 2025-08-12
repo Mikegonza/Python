@@ -615,7 +615,7 @@ while command != '4':  # Exit when user enters '4'
     command = input().lower().strip()
 '''
 
-'''
+'''swap elements
 #Write a function swap that swaps the first and last elements of a list argument.
 
 #Sample output with input: 'all,good,things,must,end,here'
@@ -632,13 +632,16 @@ swap(values_list)
 print(values_list)
 '''
 
-
+'''rounding and math
 # import math
 # help(math.pow)  # Display the documentation for the math module
 # help(math)  # Display the documentation for the math module
 
-"rounding"
-num=3.14159
-print("%.2f" % num)  # Format the number to 2 decimal places
-print("{:.3f}".format(num))  # Another way to format the number to 3 decimal places
-print("{}".format(round(num, 4)))  # Round the number to 4 decimal places
+# "rounding"
+# num=3.14159
+# print("%.2f" % num)  # Format the number to 2 decimal places
+# print("{:.3f}".format(num))  # Another way to format the number to 3 decimal places
+# print("{}".format(round(num, 4)))  # Round the number to 4 decimal places
+
+'''
+
