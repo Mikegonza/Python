@@ -645,4 +645,53 @@ print(values_list)
 
 '''
 
+'''#Raw string
+my_string = "This is a \n \"normal\" string\n"
+my_raw_string = r"This is a \n \"raw\" string"
+
+print(my_string)
+print(my_raw_string)
+'''
+
+'''#Flor division
+user_num = int(input())
+div_num = int(input())
+
+user_num = user_num//div_num
+print(user_num,end=' ')
+user_num = user_num//div_num
+print(user_num,end=' ')
+user_num = user_num//div_num
+print(user_num,end=' ')
+'''
+
+'''# Calories = ((Age x 0.2757) + (Weight x 0.03295) + (Heart Rate x 1.0781) — 75.4991) x Time / 8.368
+age = int(input())
+weight = float(input())
+heart_rate = float(input())
+time = float(input())
+
+calories = (((age * 0.2757) + (weight * 0.03295) + (heart_rate * 1.0781 - 75.4991)) * time)/8.368
+
+print(f"Calories: {calories:.2f} calories")
+'''
+
+
+'''#math functions 
+import math
+
+x = float(input())
+y = float(input())
+z = float(input())
+
+your_value1 = (math.pow(x,z))
+your_value2 = (math.pow(x,(math.pow(y,z))))
+your_value3 = (abs(x-y))
+your_value4 = (math.sqrt(math.pow(x,z)))
+
+print(f'{your_value1:.2f} {your_value2:.2f} {your_value3:.2f} {your_value4:.2f}')
+'''
+
+
+
 
