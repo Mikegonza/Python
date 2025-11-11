@@ -691,7 +691,43 @@ your_value4 = (math.sqrt(math.pow(x,z)))
 
 print(f'{your_value1:.2f} {your_value2:.2f} {your_value3:.2f} {your_value4:.2f}')
 '''
+'''#more math functions
+import math
 
+# Read the initial frequency
+f0 = float(input())
 
+# Compute r = 2^(1/12)
+r = math.pow(2, 1/12)
 
+# Compute and print the frequencies
+print(f'{f0:.2f} Hz')
+print(f'{f0 * (math.pow(r,1)):.2f} Hz')
+print(f'{f0 * (math.pow(r,2)):.2f} Hz')
+print(f'{f0 * (math.pow(r,3)):.2f} Hz')
+'''
+
+'''#string basics1
+fav_fruit='jujube'
+least_fav_fruit = input()
+
+print('My favorite fruit',fav_fruit,'has',len(fav_fruit),'characters')
+print('My least favorite fruit',least_fav_fruit,'has',len(least_fav_fruit),'characters')
+'''
+
+'''
+#string basics2
+fav_drink = input()
+print('The last character of',fav_drink,'is',fav_drink[-1])
+'''
+
+'''#string basics3 concatenation
+
+student_name = input()
+course_name = input()
+
+student_courses_str = student_name + ' is studying ' + course_name
+
+print(student_courses_str)
+'''
 
