@@ -731,3 +731,89 @@ student_courses_str = student_name + ' is studying ' + course_name
 print(student_courses_str)
 '''
 
+'''#list 1
+#Program to calculate statistics from student test scores.
+midterm_scores = [99.5, 78.25, 76, 58.5, 100, 87.5, 91, 68, 100]
+final_scores = [55, 62, 100, 98.75, 80, 76.5, 85.25]
+
+#Combine the scores into a single list
+all_scores = midterm_scores + final_scores
+
+num_midterm_scores = len(midterm_scores)
+num_final_scores = len(final_scores)
+
+print(f'{num_midterm_scores} students took the midterm.')
+print(f'{num_final_scores} students took the final.')
+
+#Calculate the number of students who took the midterm but not the final
+dropped_students = num_midterm_scores - num_final_scores
+print(f'{dropped_students} students must have dropped the class.')
+
+lowest_final = min(final_scores)
+highest_final = max(final_scores)
+
+print(f'\nFinal scores ranged from {lowest_final} to {highest_final}')
+
+# Calculate the average midterm and final scores
+# Hint: Sum the midterm scores and divide by number of midterm takers
+#       Repeat for the final
+average_midterm = sum(midterm_scores)/(num_midterm_scores)
+print(average_midterm)
+
+average_final_score = sum(final_scores)/(num_final_scores)
+print(average_final_score)
+
+print(all_scores)
+print(len(all_scores))
+print(sum(midterm_scores))
+print(dropped_students)
+print(num_midterm_scores)
+
+'''
+
+'''#list 2
+#List names_list is created with two names read from input. Then, list countries_list is created with two countries read from input.
+#  On one line, output:names_list's first element ,' lives in ',countries_list's second element,a period ('.')
+# Reads two values from input into names_list
+names_list = [input(), input()]
+# Reads two values from input into countries_list
+countries_list = [input(), input()]
+
+print(names_list[0], 'lives in', countries_list[1] + '.')
+'''
+
+'''#list 3
+#List countries_list is created with the first three countries read from input. 
+# Remove the second element of countries_list.
+# Then, read an additional country from input and append the country to countries_list.
+
+# Reads three values from input into countries_list
+countries_list = [input(), input(), input()]
+print(countries_list)
+
+countries_list.pop(1)
+read_countries_list=input()
+countries_list.append(read_countries_list)
+
+print(countries_list)
+'''
+
+'''#List 4
+#List days_list is created with four integers read from input. 
+# Using list methods and/or functions, assign:
+
+#len_var with the length of days_list.
+#index_var with the index of the element 6 in days_list.
+#max_var with the largest element of days_list.
+# Reads four values from input into days_list
+days_list = [int(input()), int(input()), int(input()), int(input())]
+
+len_var = len(days_list)
+index_var=days_list.index(6)
+max_var= max(days_list)
+
+print(f'List length: {len_var}')
+print(f'6 is found at index {index_var} of {days_list}')
+print(f'Max: {max_var}')
+'''
+
