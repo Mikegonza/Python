@@ -817,3 +817,175 @@ print(f'6 is found at index {index_var} of {days_list}')
 print(f'Max: {max_var}')
 '''
 
+'''#Tuple
+#Create a new variable point that is a tuple containing the strings 'X string' and 'Y string'.
+point = ('X string','Y string')
+
+white_house_coordinates = (38.8977, 77.0366)
+print(f'Coordinates: {white_house_coordinates}')
+print(f'Tuple length: {len(white_house_coordinates)}')
+
+# Access tuples via index
+print(f'\nLatitude: {white_house_coordinates[0]} north')
+print(f'Longitude: {white_house_coordinates[1]} west\n')
+
+# Error. Tuples are immutable
+#white_house_coordinates[1] = 50
+
+'''
+
+'''#named tuples
+from collections import namedtuple
+
+Car = namedtuple('Car', ['make','model','price','horsepower','seats'])  # Create the named tuple
+
+chevy_blazer = Car('Chevrolet', 'Blazer', 32000, 275, 8)  # Use the named tuple to describe a car
+chevy_impala = Car('Chevrolet', 'Impala', 37495, 305, 5)  # Use the named tuple to describe a different car
+
+print(chevy_blazer)
+print(chevy_impala)
+
+#Create a new named tuple Dog that has the attributes name, breed, and color.
+Dog = namedtuple('Dog', ['name', 'breed', 'color'])
+
+#Let 
+Address = namedtuple('Address', ['street', 'city', 'country']) 
+# Create a new address object house where house.street is "221B Baker Street", house.city is "London", and house.country is "England".
+house = Address('221B Baker Street', 'London', 'England')
+
+#Given the following named tuple Car = namedtuple('Car', ['make', 'model', 'price', 'horsepower', 'seats']), 
+# and data objects car1 and car2, write an expression that computes the sum of the price of both cars.
+#car1.price + car2.price
+'''
+
+'''#tuple 1
+#School is a named tuple with fields: name, city, state, and enrollment. 
+# Variable school_data is a School object created with three strings and one integer read from input as attributes. 
+# Output the following:
+# "School name: " followed by school_data's name attribute
+#"City: " followed by school_data's city attribute
+#"State: " followed by school_data's state attribute
+#"Enrollment: " followed by school_data's enrollment attribute
+from collections import namedtuple
+
+School = namedtuple('School', ['name', 'city', 'state', 'enrollment'])
+
+school_data = School(input(), input(), input(), int(input()))
+
+print(f'School name:',school_data[0])
+print(f'City:',school_data[1])
+print(f'State:',school_data[2])
+print(f'Enrollment:',school_data[3])
+'''
+
+'''#tuple 2
+#Three values are read from input and are stored into variables city_name, state_located, and population_count.
+# Initialize a tuple named city_data to store city_name, state_located, and population_count, in that order.
+city_name = input()
+state_located = input()
+population_count = int(input())
+
+city_data = (city_name,state_located,population_count)
+
+print(f'City name: {city_data[0]}, State: {city_data[1]}, Population: {city_data[2]}')
+'''
+
+'''#tuple 3
+#Import the namedtuple container from collections. 
+# Then, define a named tuple called Person with fields: first_name, last_name, and license_plate, in that order.
+from collections import namedtuple
+Person = namedtuple('Person',['first_name','last_name','license_plate'])
+
+first_name = input()
+last_name = input()
+license_plate = input()
+
+person = Person(first_name, last_name, license_plate)
+
+print(f'First name: {person.first_name}, Last name: {person.last_name}, License plate: {person.license_plate}')
+'''
+
+'''#tuple 4
+#City is a named tuple with fields: name, state, and population. Read two strings and one integer from input. 
+# Create city_data as a City tuple, and initialize city_data with city_name, state_located, and population_count as the fields.
+from collections import namedtuple
+
+City = namedtuple('City', ['name', 'state', 'population'])
+
+city_name=input()
+state_located=input()
+population_count=int(input())
+
+city_data= City( city_name, state_located,population_count)
+
+print(f'City name: {city_data.name}, State: {city_data.state}, Population: {city_data.population}')
+'''
+
+'''#Set basics 1
+#List names_list contains three strings read from input. Create a set named unique_names containing the unique strings in names_list.
+names_list = [input(), input(), input()]
+
+unique_names= set(names_list)
+
+print(sorted(unique_names))
+'''
+
+'''#set basics 2
+#An integer is read from input into variable new_number. 
+#Add new_number to numbers_picked. Then, assign num_numbers with the number of elements in numbers_picked.
+numbers_picked = {16, 20, 34}
+
+new_number = int(input())
+
+numbers_picked.add(new_number)
+num_numbers=len(numbers_picked)
+
+print(sorted(numbers_picked))
+print(f'Number of values picked: {num_numbers}')
+'''
+
+'''#set basics 3
+#Set animals_set1 contains 'stork'. Set animals_set2 contains two strings read from input. Perform the following tasks:
+#Read the next string from input and add the string to animals_set1.
+#Update animals_set1 with animals_set2.
+#Remove one random element from animals_set2.
+
+animals_set1 = {'stork'}
+animals_set2 = set()
+animals_set2.add(input())
+animals_set2.add(input())
+
+animals_set1.add(input())
+animals_set1.update(animals_set2)
+animals_set2.pop()
+
+print(f'animals_set1: {sorted(animals_set1)}')
+print(f'animals_set2 size: {len(animals_set2)}')
+'''
+
+'''#set basics 4
+#Set my_favorites contains 'goat', 'horse', and 'penguin'. 
+#Set your_favorites contains three strings read from input. 
+#Assign likeable_animals with the union of my_favorites and your_favorites.
+
+my_favorites = {'goat', 'horse', 'penguin'}
+your_favorites = {input(), input(), input()}
+
+my_favorites=set(my_favorites)
+your_favorites=set(your_favorites)
+likeable_animals=my_favorites.union(your_favorites)
+
+print(f'My favorite animals: {sorted(my_favorites)}')
+print(f'Your favorite animals: {sorted(your_favorites)}')
+print(f'Likeable animals: {sorted(likeable_animals)}')
+'''
+
+#Dictionary basics
+
+
+
+
+
+
+
+
