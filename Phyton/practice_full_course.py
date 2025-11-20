@@ -980,7 +980,59 @@ print(f'Your favorite animals: {sorted(your_favorites)}')
 print(f'Likeable animals: {sorted(likeable_animals)}')
 '''
 
-#Dictionary basics
+'''#Dictionary basics
+#Two string and integer pairs are read from input,
+#  each pair representing a student's name and score on a test.
+#  Complete the following steps:
+
+#Create an empty dictionary named scores_dict.
+#Add the following two key-value pairs to the dictionary named scores_dict:
+#Key student_name1 with the value person_score1
+#Key student_name2 with the value person_score2
+student_name1 = input()
+person_score1 = int(input())
+student_name2 = input()
+person_score2 = int(input())
+
+scores_dict={}
+scores_dict[student_name1]=person_score1
+scores_dict[student_name2]=person_score2
+
+print(f'{student_name1}: {scores_dict[student_name1]}')
+print(f'{student_name2}: {scores_dict[student_name2]}')
+'''
+
+'''#Dictionary basics 2
+#Dictionary contact_dict contains three key-value pairs,
+#  each representing an authentication code sent to an email address. 
+# An integer is read from input into variable key_name, 
+# representing an authentication code in contact_dict. Complete the following steps:
+
+#Output the email address corresponding to key_name in dictionary contact_dict.
+#Delete the key-value pair associated with key_name from contact_dict.
+contact_dict = {365558: 'Dax@mushrooms.org', 112264: 'Jen@enchiladas.org', 846292: 'Mia@cookies.com'}
+key_name = int(input())
+
+print(contact_dict[key_name])
+del contact_dict[key_name]
+
+print('Remaining pairs:')
+print(contact_dict)
+'''
+
+#dictionary basics 3
+#Dictionary test_scores contains four key-value pairs each representing a student's name and score on a test. Complete the following steps:
+#Read a string from input into variable key_name, representing a student's name.
+#Modify the test score associated with key_name so that the updated value is the original value minus 4.
+test_scores = {'Mel': 65, 'Meg': 30, 'Abe': 67, 'Mai': 71}
+print('Original:')
+print(test_scores)
+
+key_name=input()
+test_scores[key_name]
+
+print('Updated:')
+print(test_scores)
 
 
 
