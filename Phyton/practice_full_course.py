@@ -1020,7 +1020,7 @@ print('Remaining pairs:')
 print(contact_dict)
 '''
 
-#dictionary basics 3
+'''#dictionary basics 3
 #Dictionary test_scores contains four key-value pairs each representing a student's name and score on a test. Complete the following steps:
 #Read a string from input into variable key_name, representing a student's name.
 #Modify the test score associated with key_name so that the updated value is the original value minus 4.
@@ -1029,10 +1029,82 @@ print('Original:')
 print(test_scores)
 
 key_name=input()
-test_scores[key_name]
+test_scores[key_name]=test_scores[key_name]-4
 
 print('Updated:')
 print(test_scores)
+'''
+
+'''#Dictionary basics 4
+#Three integers are read from input into variables meeting1, meeting2, and meeting3. Complete the following steps:
+
+#Create an empty dictionary named important_dates.
+#Add the following three key-value pairs to the dictionary named important_dates:
+#Key 'August' with the value meeting1
+#Key 'March' with the value meeting2
+#Key 'February' with the value meeting3
+
+meeting1 = int(input())
+meeting2 = int(input())
+meeting3 = int(input())
+
+important_dates={}
+important_dates['August']=meeting1
+important_dates['March']=meeting2
+important_dates['February']=meeting3
+
+print(f"August: {important_dates['August']}")
+print(f"March: {important_dates['March']}")
+print(f"February: {important_dates['February']}")
+'''
+
+'''#Dictionary basics 5
+#Dictionary food_quantities contains four key-value pairs, each representing a food name and the quantity ordered.
+#  A string is read from input into variable key_name, representing a food name in food_quantities. Complete the following steps:
+
+#Output the quantity corresponding to key_name in dictionary food_quantities.
+#Delete the key-value pair associated with key_name from food_quantities.
+
+food_quantities = {'muffins': 45, 'waffles': 74, 'tacos': 55, 'avocados': 30}
+key_name = input()
+
+print(food_quantities[key_name])
+del food_quantities[key_name]
+
+print('Remaining pairs:')
+print(food_quantities)
+'''
+
+'''Dictionary basics 6
+#Dictionary age_dict contains four key-value pairs each representing a student's name and age. Complete the following steps:
+#Read a string from input into variable key_name, representing a student's name.
+#Modify the age associated with key_name so that the updated value is the original value plus 3.
+
+age_dict = {'Tia': 47, 'Noa': 39, 'Fay': 44, 'Del': 14}
+print('Original:')
+print(age_dict)
+
+key_name=input()
+age_dict[key_name]=age_dict[key_name]+3
+
+print('Updated:')
+print(age_dict)
+'''
+
+'''#Dictionary basics 7
+#Dictionary time_to_word contains twelve key-value pairs. Complete the following steps:
+#Read integers timeA and timeB from input, representing an event's start and end times.
+#Use time_to_word to output key timeA's value followed by ' to ' and key timeB's value.
+time_to_word = {
+	1: 'one', 2: 'two', 3: 'three', 4: 'four',
+	5: 'five', 6: 'six', 7: 'seven', 8: 'eight',
+	9: 'nine', 10: 'ten', 11: 'eleven', 12: 'twelve'
+}
+
+timeA=int(input())
+timeB=int(input())
+print(time_to_word[timeA],'to',time_to_word[timeB])
+'''
 
 
 
