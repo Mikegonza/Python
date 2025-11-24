@@ -1131,9 +1131,85 @@ overall_grade = (exam1_grade + exam2_grade + exam3_grade + exam4_grade) / 4 *100
 print(f"Your overall grade is: {overall_grade}")
 '''
 
-#Types of conversions
+'''#Types of conversions
+input_text = input('Enter a number:\n')
+float_variable = float(input_text)
+int_variable = int(float_variable)
 
+print(f'original input text: {input_text}')
+print(f'input text converted to a float: {float_variable}')
+print(f'float variable converted to an int: {int_variable}')
+'''
 
+'''#Types conversions 1
+#An integer is read from input into variable num_feet. 
+# Use a conversion function to convert the value of num_feet to a string and assign the value to the variable str_feet.
+num_feet = int(input())
 
+num_feet=str(num_feet)
+str_feet= num_feet
+
+print('Number of feet: ' + str_feet)
+'''
+
+'''#Types conversion 2
+#Given that 1 dollar = 100 cents, 
+# complete the multiplication of num_dollars and CENTS_PER_DOLLAR so that the result is implicitly converted to a float.
+CENTS_PER_DOLLAR = 100
+num_dollars = float(input())
+
+num_cents = float(num_dollars)* CENTS_PER_DOLLAR
+
+print(f'{num_cents} cents')
+'''
+
+'''#Types conversions 3
+#Two integers are read from input into variables num_kilometers1 and num_kilometers2. 
+# Assign avg_kilometers_per_hour with the average kilometers per hour. Then, convert avg_kilometers_per_hour to an integer.
+num_kilometers1 = int(input())
+num_kilometers2 = int(input())
+
+avg_kilometers_per_hour= (num_kilometers1 + num_kilometers2)/2
+avg_kilometers_per_hour= int(avg_kilometers_per_hour)
+
+print(avg_kilometers_per_hour)
+'''
+
+'''#Binary numbers
+#Set each binary digit for the unsigned binary number below to 1 or 0 to obtain the decimal equivalents of 9, then 50,
+#  then 212, then 255. Note that 255 is the largest integer that the 8 bits can represent.
+
+# 1   2   4   8   16   32   64   128
+# 2⁰  2¹  2²  2³  2⁴   2⁵   2⁶   2⁷
+
+'''
+
+'''#(f-String) formatted string literals
+#first_name and last_name are read from input. Modify the f-string f'{}, {}' so that:
+#The first {} contains last_name.
+#The second {} contains first_name.
+first_name = input()
+last_name = input()
+print(f'{last_name}, {last_name}')
+'''
+
+'''#(f-String) formatted string literals 1
+#x is read from input as an integer, representing the side length of a square. 
+# Compute the square's area as x*x. Use f-string's = sign feature within the provided 
+# curly brackets as the replacement field to output both the expression and result.
+x = int(input())
+
+print(f'{x*x=}')
+'''
+
+'''#(f-String) formatted string literals 2
+#input_num is read from input as a floating-point value. Using format specifications, output the following:
+#input_num in exponent notation
+#input_num in fixed-point notation with six places of precision
+input_num = float(input())
+
+print(f'{input_num:e}')
+print(f'{input_num:.6f}')
+'''
 
 
