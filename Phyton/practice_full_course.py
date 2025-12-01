@@ -1326,5 +1326,43 @@ your_value=(num1+num2+num3+num4)/4
 print(f'{your_value:.3f}')
 '''
 
+'''#if-else statement
+user_num = int(input("Enter a number: "))
 
+div_remainder = user_num % 2
+
+if div_remainder == 0:
+    print(f"{user_num} is even.")
+else:
+    print(f"{user_num} is odd.")
+'''
+
+'''#elif statement 1
+num_cards = int(input())
+
+if num_cards == 24:
+    print('Euchre')
+elif num_cards == 36:
+    print('Short deck')
+else:
+    print('Another deck size')
+'''
+
+'''#elif statement 2
+#If num_players is:
+#1, output 'Solo'.
+#5, output 'Quintet'.
+#6, output 'Sextet'.
+#Otherwise, output 'Another number of musicians'.
+num_players = int(input())
+
+if num_players == 1:
+    print('Solo')
+elif num_players == 5:
+    print('Quintet')
+elif num_players == 6:
+    print('Sextet')
+else:
+    print('Another number of musicians')
+'''
 
