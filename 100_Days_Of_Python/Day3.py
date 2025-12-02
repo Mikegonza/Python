@@ -107,3 +107,46 @@ print(f"Your final bill is: ${bill}.")
 
 '''
 
+print('''                       /9                          6\
+                     // |                          | \\
+                   //   |                          |   \\
+                 //     |                          |     \\
+               //     __|__                        |       \\
+             //      |__X__|                     __|__       \\
+___________//___________________________________|__X__|________\\____________
+|_____|_____|_____|_____|_____|_____|_____|_____|#####|_____|_____|_____|____
+___|_____|_____|_____|_____|_____|_____|_____|_____|_____|_____|_____|_____|_
+|_____|_____|_____|_____|_____|_____|_____|_____|_____|_____|_____|_____|____
+___|_____|_____|_____|_____|_____|_____|_____|_____|_____|_____|_____|_____|_
+|_____|_____|_____|_____|_____|_____|_____|_____|_____|_____|_____|_____|____
+___|_____|_____|_____|_____|_____|_____|_____|_____|_____|_____|_____|_____|_''')
+
+print('Welcome to the wall')
+print('Your mission is trying to jump the wall and cross to the other side! Good luck!')
+ans1=input('Your are at the cross road in front of the wall. Where do you want to go? type "left" or "rigth"\n').lower()
+
+if ans1 == "left":
+    #game continue
+    ans2 = input('You have a block in front of you, do you want to pick the block or jump over?\n').lower()
+    if ans2 == "pick":
+        #game continue
+        ans3=input('You are in front of the wall, there is 3 buttons botton with hiden functions, button red, button yellow and button blue\n').lower()
+        if ans3 == "red":
+            print("Bye you just press a button to open the flor and fall,Game Over!")
+        elif ans3=="yellow":
+            print("congratulations you just jump the wall and win the game!, GG")
+        elif ans3=="blue":
+            print("Sorry the wall fall over you! Game over!")
+    else:
+        print("A car just run over you! Game over!")
+else:
+    print("You got hit by a laser! BYE BYE! Game Over!")
+
+
+
+
+
+
+
+
+
