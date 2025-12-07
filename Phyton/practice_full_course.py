@@ -1383,4 +1383,23 @@ else:
     print('not in high school')
 '''
 
+'''#Detecting ranges with branches 
+#When the input variable number_of_bicycles is:
+#greater than or equal to 49, output 'Need multiple racks'.
+#between 12 inclusive and 49 exclusive, output 'Large bike rack'.
+#between 0 exclusive and 11 inclusive, output 'Single bike rack'.
+#less than or equal to 0, output 'Invalid input'.
+number_of_bicycles = int(input())
+
+if number_of_bicycles >= 49:
+    print('Need multiple racks')
+elif 49 > number_of_bicycles >=12:
+    print('Large bike rack')
+elif 11 >= number_of_bicycles > 0:
+    print('Single bike rack')
+elif number_of_bicycles <= 0:
+    print('Invalid input')
+'''
+
+
 
