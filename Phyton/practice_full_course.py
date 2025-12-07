@@ -676,7 +676,6 @@ calories = (((age * 0.2757) + (weight * 0.03295) + (heart_rate * 1.0781 - 75.499
 print(f"Calories: {calories:.2f} calories")
 '''
 
-
 '''#math functions 
 import math
 
@@ -815,7 +814,6 @@ print(f'List length: {len_var}')
 print(f'6 is found at index {index_var} of {days_list}')
 print(f'Max: {max_var}')
 '''
-
 
 '''#List basics 4.1 extra practice
 #Given the user inputs, complete a program that does the following tasks:
@@ -1401,5 +1399,156 @@ elif number_of_bicycles <= 0:
     print('Invalid input')
 '''
 
+'''#Detecting ranges using logical operators.
+#Modify the given if statement so that 'Not a mid-size town' is output if population_input is outside the range 1000 - 4650 inclusive.
+population_input = int(input())
+
+if (population_input < 1000) or (population_input > 4650):
+    print('Not a mid-size town')
+else:
+    print('Mid-size town')
+'''
+
+'''#Detecting ranges using logical operators 2
+#The 32% tax bracket applies to input_pay in the range 53000 - 85000 inclusive. 
+#Write an if statement that outputs '32% tax bracket' 
+# if the input input_pay is in this range. Otherwise, output 'Different tax bracket'.
+input_pay = int(input())
+
+if (input_pay >= 53000) and (input_pay <=85000):
+    print('32% tax bracket')
+else:
+    print('Different tax bracket')
+'''
+
+'''#Detecting ranges using logical operators 3
+#The temperature of lead in degrees Fahrenheit is read from input into variable lead_temp. If lead_temp is:
+#≤ 621 degrees Fahrenheit, output 'The lead is now a solid.'
+#> 621 degrees Fahrenheit and < 3164 degrees Fahrenheit, output 'The lead is now a liquid.'
+#Otherwise, output 'The lead is now a gas.'
+lead_temp = int(input())
+
+if lead_temp <= 621:
+    print('The lead is now a solid.')
+elif (lead_temp > 621) and (lead_temp < 3164):
+    print( 'The lead is now a liquid.')
+else:
+    print( 'The lead is now a gas.')
+'''
+
+'''#Detecting ranges using logical operators 4
+# If year_input is in the inclusive range:
+#1950 - 1959, output 'The 50s'.
+#1960 - 1969, output 'The 60s'.
+#1970 - 1979, output 'The 70s'.
+#Otherwise, output 'Not in the period of research'.
+year_input = int(input())
+
+if (year_input >= 1950) and (year_input <= 1959):
+    print('The 50s')
+elif (year_input >= 1960) and (year_input <= 1969):
+    print('The 60s')
+elif (year_input >= 1970) and (year_input <= 1979):
+    print('The 70s')
+else:
+    print('Not in the period of research')
+'''
+
+'''# Ranges with gaps.
+#Integer mushrooms_available is read from input representing the number of mushrooms. Output 'Unreasonable batch' if:
+#the number of mushrooms is fewer than 15.
+#or the number of mushrooms is 30 or more.
+mushrooms_available = int(input())
+if (mushrooms_available < 15) or (mushrooms_available >= 30):
+    print('Unreasonable batch')
+'''
+
+'''#Ranges with gaps 2
+#Float length_kilometers is read from input representing a length in kilometers. 
+# If the length is shorter than 40.5 kilometers or longer than 90.5 kilometers, output 'Discard'. 
+# Otherwise, output 'Approve'.
+length_kilometers = float(input())
+if (length_kilometers < 40.5) or (length_kilometers > 90.5):
+    print('Discard')
+else:
+    print('Approve')
+'''
+
+'''#Range with gaps 3
+#Integer berries_count is read from input representing the number of berries. Output:
+#'Small carton', if there are 20 - 70 berries inclusive.
+#'Medium carton', if there are 110 - 160 berries inclusive.
+berries_count = int(input())
+if (70 >= berries_count >= 20):
+    print('Small carton')
+elif (160 >= berries_count >= 110):
+    print('Medium carton')
+'''
+
+'''#Range with gaps 4
+#Integer num_forks is read from input representing the number of forks. Output:
+#'Standard bin', if the number of forks is greater than or equal to 30 and less than or equal to 70.
+#'Full bin', if the number of forks is greater than 130 and less than or equal to 170.
+#'Not efficient to ship', otherwise.
+num_forks = int(input())
+if (num_forks >= 30) and (num_forks <= 70):
+    print('Standard bin')
+elif (num_forks > 130) and (num_forks <= 170):
+    print('Full bin')
+else:
+    print('Not efficient to ship')
+'''
+
+'''#Detecting multiple features with branches.
+#car_year is read from input. Write multiple if statements:
+#If car_year is 1953 or later, output 'Probably can carry several people.'
+#If car_year is 1962 or earlier, output 'Probably only has a few safety features.'
+#If car_year is after 1991, then output 'Probably has traction control.'
+car_year = int(input())
+if car_year >= 1953:
+    print('Probably can carry several people.')
+if car_year <= 1962:
+    print('Probably only has a few safety features.')
+if car_year > 1991:
+    print('Probably has traction control.')
+'''
+
+'''#Detecting multiple features with branches. 2
+#input_num1 and input_num2 are read from input. Write one if statement and one if-else statement:
+#If input_num1 is less than or equal to 30, then output 'input_num1 is less than or equal to 30.'
+#If input_num2 is greater than 5, then assign input_num2 with 10.
+#Otherwise, output 'input_num2 is less than or equal to 5.'
+input_num1 = int(input())
+input_num2 = int(input())
+
+if input_num1 <= 30:
+    print('input_num1 is less than or equal to 30.')
+if input_num2 > 5:
+        input_num2 = 10
+else:
+    print('input_num2 is less than or equal to 5.')
+
+print(f'input_num2 is {input_num2}.')
+'''
+
+'''#Detecting multiple features with branches 3
+#Integers num_pizzas and my_cash are read from input. Each pizza costs 15 dollars.
+#Write the following if-else statement. Within the else branch, write the following assignment and nested if-else statement:
+#If num_pizzas is less than 3, output 'Not enough pizzas purchased'.
+#Otherwise:
+#Assign variable total_cost with the product of num_pizzas and 15.
+#If total_cost is less than or equal to my_cash, then output 'Approved transaction'.
+#Otherwise, output 'Not all pizzas purchased'.
+num_pizzas = int(input())
+my_cash = int(input())
+if num_pizzas < 3:
+    print('Not enough pizzas purchased')
+else:
+    total_cost= num_pizzas * 15
+    if total_cost <= my_cash:
+        print('Approved transaction')
+    else:
+        print('Not all pizzas purchased')
+'''
 
 
