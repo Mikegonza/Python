@@ -1551,4 +1551,76 @@ else:
         print('Not all pizzas purchased')
 '''
 
+'''#Membership operators: in/not in
+# Use the "in" operator
+barcelona_fc_roster = ['Alves', 'Messi', 'Fabregas']
+
+name = input('Enter name to check: ')
+
+if name in barcelona_fc_roster:
+    print(f'Found {name} on the roster.')
+else:
+    print(f'Could not find {name} on the roster.')
+#///////////////////////////////////////////////////
+# Use the "not in" operator
+barcelona_fc_roster = ['Alves', 'Messi', 'Fabregas']
+
+name = input('Enter name to check: ')
+
+if name not in barcelona_fc_roster:
+    print(f'Could not find {name} on the roster.')
+else:
+    print(f'Found {name} on the roster.')
+#///////////////////////////////////////////////////
+'''
+
+'''#Identity operators: is/is not
+w = 500
+x = 500 + 500  # Create a new object with value 1000
+y = w + w      # Create a second object with value 1000
+z = x          # Bind z to the same object as x
+
+if z is x:
+    print('z and x are bound to the same object')
+if z is not y:
+    print('z and y are NOT bound to the same object')
+'''
+
+'''#Boolean operators: Detect specific values.
+#Write an expression using membership operators that prints "Special number"
+#if special_num is one of the special numbers stored in the list special_list = [-99, 0, 44].
+#Sample output with input: 17
+#Not special number
+special_list = [-99, 0, 44]
+special_num = int(input())
+
+if special_num in special_list:
+    print('Special number')
+else:
+    print('Not special number')
+'''
+
+'''#Conditional expression: Print negative or nonnegative.
+#Create a conditional expression that evaluates to string "negative" if user_val is less than 0, and "nonnegative" otherwise.
+#Sample output with input: -9
+#-9 is negative
+user_val = int(input())
+
+cond_str = "negative" if(user_val<0) else "nonnegative"
+
+print(f'{user_val} is {cond_str}')
+'''
+
+'''#Conditional expression: Conditional assignment.
+#Using a conditional expression, write a statement that increments num_users if update_direction is 3, 
+#otherwise decrements num_users.
+#Sample output with inputs: 8 3
+#New value is: 9
+num_users = int(input())
+update_direction = int(input())
+
+num_users = num_users+1 if(update_direction==3) else num_users-1
+
+print(f'New value is: {num_users}')
+'''
 
