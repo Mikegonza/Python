@@ -1624,3 +1624,15 @@ num_users = num_users+1 if(update_direction==3) else num_users-1
 print(f'New value is: {num_users}')
 '''
 
+strokes_used = int(input())
+par = int(input())
+
+if strokes_used < (par - 2):
+    print("Eagle")
+elif strokes_used < (par -1):
+    print("Birdie")
+elif strokes_used == par:
+    print("Par")
+elif strokes_used > par:
+
+print(f'Par{par} in {strokes_used} strokes is ')
