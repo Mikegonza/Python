@@ -1624,15 +1624,47 @@ num_users = num_users+1 if(update_direction==3) else num_users-1
 print(f'New value is: {num_users}')
 '''
 
-strokes_used = int(input())
+'''#Golf scores record the number of strokes used to get the ball in the hole.
+#The expected number of strokes varies from hole to hole and is called par (possible values: 3, 4, or 5). 
+#Each score's name is based on the actual strokes taken compared to par:
+#"Eagle": number of strokes is two less than par
+#"Birdie": number of strokes is one less than par
+#"Par": number of strokes equals par
+#"Bogey": number of strokes is one more than par
+#Given two integers that represent the number of strokes used and par, 
+#write a program that prints the appropriate score name. 
+#Print "Error" at the end of the output if par is not 3, 4, or 5, or if the score's name is not "Eagle", "Birdie", "Par", or "Bogey".
+strokes = int(input())
 par = int(input())
 
-if strokes_used < (par - 2):
-    print("Eagle")
-elif strokes_used < (par -1):
-    print("Birdie")
-elif strokes_used == par:
-    print("Par")
-elif strokes_used > par:
+score_name = ""
 
-print(f'Par{par} in {strokes_used} strokes is ')
+# Check for valid par
+if par not in (3, 4, 5):
+    score_name = "Error"
+else:
+    diff = strokes - par
+    if diff == -2:
+        score_name = "Eagle"
+    elif diff == -1:
+        score_name = "Birdie"
+    elif diff == 0:
+        score_name = "Par"
+    elif diff == 1:
+        score_name = "Bogey"
+    else:
+        score_name = "Error"
+
+print(f"Par {par} in {strokes} strokes is {score_name}")
+'''
+
+#Leap year
+#A year in the modern Gregorian Calendar consists of 365 days. 
+# In reality, the earth takes longer to rotate around the sun. 
+# To account for the difference in time, every 4 years, a leap year takes place. 
+# A leap year is when a year has 366 days: An extra day, February 29th. 
+# The requirements for a given year to be a leap year are:
+#1) The year must be divisible by 4
+#2) If the year is a century year (1700, 1800, etc.), the year must be evenly divisible by 400; therefore, both 1700 and 1800 are not leap years
+#Some example leap years are 1600, 1712, and 2016.
+#Write a program that takes in a year and determines whether that year is a leap year.
