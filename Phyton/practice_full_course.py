@@ -1658,7 +1658,7 @@ else:
 print(f"Par {par} in {strokes} strokes is {score_name}")
 '''
 
-#Leap year
+'''#Leap year
 #A year in the modern Gregorian Calendar consists of 365 days. 
 # In reality, the earth takes longer to rotate around the sun. 
 # To account for the difference in time, every 4 years, a leap year takes place. 
@@ -1679,3 +1679,34 @@ if is_leap_year:
     print(f"{input_year} - leap year")
 else:
     print(f"{input_year} - not a leap year")
+'''
+
+'''#Primary U.S. interstate highways are numbered 1-99. 
+# Odd numbers (like the 5 or 95) go north/south, and evens (like the 10 or 90) go east/west. 
+
+# Auxiliary highways are numbered 100-999, and service the primary highway indicated by the rightmost two digits.
+# Thus, I-405 services I-5, and I-290 services I-90. Note: 200 is not a valid auxiliary highway because 00 is not a valid primary highway number.
+
+#Given a highway number, indicate whether it is a primary or auxiliary highway. 
+# If auxiliary, indicate what primary highway it serves. Also indicate if the (primary) highway runs north/south or east/west.
+#invalid
+highway_number = int(input())
+if ((highway_number < 1 or highway_number > 999) or (highway_number % 100 == 0)):
+    print(f"{highway_number} is not a valid interstate highway number.")
+#valid
+else:
+    if(highway_number>99):
+        print(f"I-{highway_number} is auxiliary", end='')
+        #get the primary
+        primary_number = highway_number % 100 #get the rigthmost 2 digits
+        print(f", serving I-{primary_number}",end='')
+    else:
+        primary_number = highway_number
+        print(f"I-{primary_number} is primary", end='')
+    #directions
+    if (primary_number % 2 == 0):
+        print(", going east/west.")
+    else:#odd
+        print(", going north/south.")
+'''
+
