@@ -1710,7 +1710,7 @@ else:
         print(", going north/south.")
 '''
 
-#while loops
+'''#while loops examples
 #A while loop is a construct that repeatedly executes an indented block of code (known as the loop body) 
 # as long as the loop's expression is True. At the end of the loop body, 
 # execution goes back to the while loop statement and the loop expression is evaluated again. 
@@ -1721,5 +1721,75 @@ else:
 # Get character from user here
 user_char=input()
 while user_char != 'n':
-    print(f'character {user_char} is not the same')# Do something
+    print(f'character {user_char} is not the same')
     user_char=input()# Get character from user here
+'''
+
+'''#While loop with a sentinel value
+#While loop example: Face-printing program that ends when user enters 'q'.
+nose = '0'  # Looks a little like a nose
+
+# Get first character for eyes and mouth
+user_input = input("Enter a character ('q' for quit): ")
+user_value = user_input[0]
+
+# Loop until user enters sentinel value
+while user_value != 'q':
+    print(f' {user_value} {user_value} ')  # Print eyes     
+    print(f'  {nose}  ')  # Print nose     
+    print(user_value*5)  # Print mouth
+    print('\n')
+
+    # Get new character for eyes and mouth
+    user_input = input("Enter a character ('q' for quit): ")
+    user_value = user_input[0]
+
+print('Goodbye.\n')
+'''
+
+'''#While loop iterations.
+x = 1
+y = 3
+z = 5
+while (not (y < x < z)):
+    print(x, end=' ')
+    x = x + 1
+#infinite loop
+x = 10
+while x != 3:
+    print(x, end=' ')
+    x = x / 2
+'''
+
+'''#Integer user_input is read from input. Write a while loop that reads values from input and 
+# casts the values into integers, while a negative integer is read. In each iteration:
+#Update sum_ints with the sum of sum_ints and user_input.
+#Then, read the next integer from input into variable user_input.
+sum_ints = 0
+user_input = int(input())
+
+while user_input < 0:
+    sum_ints = sum_ints + user_input
+    user_input = int(input())
+
+print(sum_ints)
+'''
+
+'''#Integer user_num is read from input. Write a while loop that iterates while user_num is non-negative. In each iteration:
+#Update value output_num as follows:
+#If user_num is divisible by 3, output 'miss' and do not update output_num.
+#Otherwise, output 'hit' and increment output_num.
+#Then, read the next integer from input into variable user_num.
+output_num = 0
+user_num = int(input())
+
+while user_num >= 0:
+    if user_num  % 3==0:
+        print('miss')
+    else:
+        print('hit')
+        output_num += 1
+    user_num = int(input())
+
+print(f'Output number is {output_num}')
+'''
