@@ -1710,3 +1710,16 @@ else:
         print(", going north/south.")
 '''
 
+#while loops
+#A while loop is a construct that repeatedly executes an indented block of code (known as the loop body) 
+# as long as the loop's expression is True. At the end of the loop body, 
+# execution goes back to the while loop statement and the loop expression is evaluated again. 
+# If the loop expression is True, the loop body is executed again. But, 
+# if the expression evaluates to False, then execution instead proceeds to below the loop body.
+# Each execution of the loop body is called an iteration, and looping is also called iterating.
+#Assume user would enter 'a', then 'b', then 'n'.
+# Get character from user here
+user_char=input()
+while user_char != 'n':
+    print(f'character {user_char} is not the same')# Do something
+    user_char=input()# Get character from user here
