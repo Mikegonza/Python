@@ -1836,4 +1836,160 @@ while user_text != 'Goodbye':
 print('It was nice talking with you. Goodbye.\n')
 '''
 
+'''#while minimum
+entered_value = int(input())
+
+minimum_number = entered_value
+
+while entered_value > 0:
+    if entered_value < minimum_number:
+        minimum_number = entered_value
+    entered_value = int(input())
+
+print(f'Min value: {minimum_number}')
+'''
+
+'''#while product
+final_product = 1
+entered_value = int(input())
+
+while entered_value > 0:
+    final_product = final_product * entered_value
+    entered_value = int(input())
+
+print(f'Product: {final_product}')
+'''
+
+'''#while Discount
+user_age = int(input())
+
+while (user_age < 15 or user_age > 70):
+    if user_age < 15:
+        print('5% discount')
+    else:
+        print('15% discount')
+    user_age = int(input())
+
+print('Regular ticket price')
+'''
+
+'''#while keep bidding
+import random
+random.seed(5)
+
+keep_bidding = 'y'
+next_bid = 0
+
+while keep_bidding != 'n':
+   next_bid = next_bid + random.randint(1, 10)
+   print(f'I\'ll bid ${next_bid}!')
+   print('Continue bidding? (y/n)', end=' ')
+   keep_bidding = input()
+'''
+
+'''#while double
+num_insects = int(input())
+
+""" Your solution goes here """
+while num_insects <= 100:
+    print(num_insects)
+    num_insects = num_insects * 2
+'''
+
+'''#while input not equal
+expected_string = input()
+input_string = input()
+
+word_count = 1
+
+while input_string != 'Stop':
+    if input_string == expected_string:
+        word_count+=1
+    input_string= input()
+
+print(f'{expected_string} occurs {word_count} time(s).')
+'''
+
+'''#while input between
+input_item = input()
+furniture_number = int(input())
+
+while 20 <= furniture_number <= 45:
+    input_item = input()
+    furniture_number = int(input())
+
+print(f'{input_item}: is out of range!')
+'''
+
+'''#while current data less than previuos data
+previous_data = int(input())
+current_data = int(input())
+print(f'Sequence starts at {previous_data}.')
+
+while current_data < previous_data:
+    print(f'{current_data} is less than {previous_data}. Sequence is decreasing.')
+    previous_data = current_data
+    current_data= int(input())
+'''
+
+'''#Counting with a while loop
+#Program that calculates savings and interest
+
+initial_savings = 10000
+interest_rate = 0.05
+
+print(f'Initial savings of ${initial_savings}')
+print(f'at {interest_rate*100:.0f}% yearly interest.\n')
+
+years = int(input('Enter years: '))
+print()
+
+savings = initial_savings
+i = 1  # Loop variable
+while i <= years:  # Loop condition
+    print(f' Savings at beginning of year {i}: ${savings:.2f}')
+    savings = savings + (savings*interest_rate)
+    i = i + 1  # Increment loop variable
+
+print('\n')
+'''
+
+'''#Loop over presidential election years.
+year = 1792
+current_year = 2025
+
+while year <= current_year:
+    # Print the election year
+    print(year)
+    year = year + 4
+'''
+
+'''#Loop iterates over the odd integers from 1 to 9 (inclusive).
+i = 1
+while i <= 9:
+    i=i+2# Loop body statements go here
+
+#Loop iterates over the odd integers from 211 down to 31 (inclusive).
+i = 211
+while i >= 31:
+    i= i-2# Loop body statements go here
+    
+#Loop iterates from -100 to 65.
+i=-100
+while i <= 65:
+    # Loop body statements go here
+    i = i + 1
+'''
+
+'''#Integer num_threshold is read from input. Initialize variable k with 7. Then, 
+#write a while loop to perform the following tasks at each iteration until k is greater than num_threshold:
+#Output the value of k.
+#Increase k by 5.
+num_threshold = int(input())
+
+k=7
+while k <= num_threshold:
+    print(k)
+    k = k+5
+'''
 
