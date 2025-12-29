@@ -1932,7 +1932,7 @@ while current_data < previous_data:
     current_data= int(input())
 '''
 
-'''#Counting with a while loop
+'''#while Counting with a while loop
 #Program that calculates savings and interest
 
 initial_savings = 10000
@@ -1954,7 +1954,7 @@ while i <= years:  # Loop condition
 print('\n')
 '''
 
-'''#Loop over presidential election years.
+'''#while Loop over presidential election years.
 year = 1792
 current_year = 2025
 
@@ -1964,7 +1964,7 @@ while year <= current_year:
     year = year + 4
 '''
 
-'''#Loop iterates over the odd integers from 1 to 9 (inclusive).
+'''#while Loop iterates over the odd integers from 1 to 9 (inclusive).
 i = 1
 while i <= 9:
     i=i+2# Loop body statements go here
@@ -1981,7 +1981,7 @@ while i <= 65:
     i = i + 1
 '''
 
-'''#Integer num_threshold is read from input. Initialize variable k with 7. Then, 
+'''#while Integer num_threshold is read from input. Initialize variable k with 7. Then, 
 #write a while loop to perform the following tasks at each iteration until k is greater than num_threshold:
 #Output the value of k.
 #Increase k by 5.
@@ -1992,4 +1992,172 @@ while k <= num_threshold:
     print(k)
     k = k+5
 '''
+
+'''#for loop: Looping over strings, lists, and dictionaries.
+cities = {
+    'Paris': 958,
+    'Toronto': 550,
+    'Nairobi': 309,
+}
+
+best = ''
+distance = 0
+for city in cities:
+    if cities[city] > distance:
+        best = city
+        distance = cities[city]
+print(best, distance)'''
+
+'''#for loop: Integer in_count is read from input representing the number of values to be read next. 
+#The remaining values are read from input into paint_list. For each value in paint_list, 
+#output the value followed by ' selected' on the same line.
+in_count = int(input())
+paint_list = []
+
+for i in range(in_count):
+    paint_list.append(input())
+
+print(f'List has {in_count} elements:')
+
+for paint in paint_list:
+    print(f'{paint} selected')'''
+
+'''#for loop: Integer val_count is read from input representing the number of values to be read next. 
+#The remaining values are read from input into member_list. 
+# Use a for loop to output all values in member_list in reverse order on the same line, 
+# and surround each value with angle brackets '<' and '>'. After the loop terminates, output a newline.
+val_count = int(input())
+member_list = []
+
+for i in range(val_count):
+    member_list.append(input())
+
+print(f'List has {val_count} elements:')
+
+for member in reversed(member_list):
+    print(f'<{member}>', end='')
+
+print()'''
+
+'''#for loop: student_dict is a dictionary with students' name and height pairs. A new student is read from input and added into student_dict.
+#For each student in student_dict, output the student's name, followed by "'s height: ", and the student's height. 
+#Then, assign average_value with the average of all the heights in student_dict.
+student_dict = {
+    'Sid': 141,
+    'Ken': 177,
+    'Lei': 194,
+    'Mae': 174,
+    'Avi': 182
+}
+
+name = input()
+height_cm = int(input())
+student_dict[name] = height_cm
+
+total_height = 0
+
+for name in student_dict:
+    print(f"{name}'s height: {student_dict[name]}")
+    total_height += student_dict[name]
+
+average_value = total_height / len(student_dict)
+
+print(f'Average height: {average_value:.2f}')'''
+
+'''#Counting using the range() function
+#Every integer from 0 to 500.
+#range(501)
+#Every integer from 10 to 20
+#range(10,21)
+#Every 2nd integer from 10 to 20
+#range(10,21,2)
+#Every integer from 5 down to -5
+#range(5,-6,-1)
+#i starts with 0. Each iteration outputs the value of i then decrements i by 1. 
+#When i reaches -4, the loop body will not be entered because -4 > -4 is false.
+#for i in range(0, -4, -1):
+#    print(i, end=' ')'''
+
+'''#range function: Positive integer hours_max is read from input, representing the hours since midnight. 
+#Complete the range() function call so that the for loop iterates through the increasing sequence 
+#of all non-negative integers less than or equal to hours_max.
+hours_max = int(input())
+
+print('Hours passed:', end=' ')
+
+for i in range(0,hours_max+1):
+    print(i, end=' ')
+print()'''
+
+'''#range function: Positive integers batch_begin and batch_end are read from input, 
+#representing the batch numbers assigned to a collection of experimental data,with batch_begin less than batch_end. 
+#Complete the for loop to iterate through the increasing sequence of all integers between batch_begin (inclusive) and batch_end (exclusive).
+batch_begin = int(input())
+batch_end = int(input())
+
+print('Batch numbers:', end=' ')
+
+for i in range(batch_begin,batch_end):
+    print(i, end=' ')
+print()'''
+
+'''#range function: Integers start_time and end_time are read from input, 
+# representing a range of time step of an activity. Complete the for loop as follows:
+#Use curr_time as the loop variable.
+#Iterate through the increasing sequence of all the integers from start_time to end_time, both inclusive, with a step of 5.
+start_time = int(input())
+end_time = int(input())
+
+print('Time steps:', end=' ')
+
+for curr_time in range(start_time,end_time+1,5):
+    print(curr_time, end=' ')
+print()'''
+
+'''#range function: Integers start_month and stop_month are read from input, representing a period of time in months. 
+#Integer start_month is less than stop_month. 
+#For every other month between start_month and stop_month, both inclusive, 
+#output 'Month picked: ' followed by each month's value.
+start_month = int(input())
+stop_month = int(input())
+
+for month in range(start_month,stop_month+2,2):
+    print(f'Month picked: {month}')'''
+
+'''#Nested loop example: Histogram.
+num = 0
+while num >= 0:
+    num = int(input('Enter an integer (negative to quit):\n'))
+
+    if num >= 0:
+        print('Depicted graphically:')
+        for i in range(num):
+            print('*', end=' ')
+        print('\n')
+
+print('Goodbye.')
+'''
+
+'''#nested loop: 
+c1 = 'a'
+while c1 < 'b':
+    c2 = 'a'
+    while c2 <= 'c':
+        print(f'{c1}{c2}', end = ' ')
+        c2 = chr(ord(c2) + 1)
+    c1 = chr(ord(c1) + 1)
+    #output:aa ab ac 
+'''
+
+'''#nested loop: 
+i1 = 1
+while i1 < 19:
+    i2 = 3
+    while i2 <= 9:
+        print(f'{i1}{i2}', end=' ')
+        i2 = i2 + 3
+    i1 = i1 + 10
+    #output:13 16 19 113 116 119 
+'''
+
 
