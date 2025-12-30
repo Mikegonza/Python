@@ -2160,4 +2160,109 @@ while i1 < 19:
     #output:13 16 19 113 116 119 
 '''
 
+'''nested loop
+count = 0
+for i in range(2):
+   for j in range(4):
+      count = count + 1
+print(count)'''
+
+'''#nested loop best example:
+rows= int(input("enter the number of rows: "))
+colums= int(input("enter the number of columns: "))
+symbol= input("enter the symbol to use: ")
+
+for x in range(rows):
+    for y in range(colums):
+        print(symbol,end="")
+    print()'''
+
+'''#nested loop: characters
+letter1 = 'e'
+while letter1 < 'g':
+    letter2 = 's'
+    while letter2 <= 'u':
+        print(f'{letter1}{letter2}')
+        letter2 = chr(ord(letter2) + 1)
+    letter1 = chr(ord(letter1) + 1)'''
+
+'''#nested loop excersice
+#Integers num_rows and num_columns are read from input representing the number of rows and columns of a theater's seating plan. 
+#Complete the nested for loop to output each seat label, as shown in the example. 
+#Each seat label is followed by a space, and each row is followed by a newline.
+#Define the outer for loop with no indentation to iterate through each row of the theater. Use the loop variable current_row and iterate num_rows times, starting with integer 1.
+#In the outer loop's body, use one indentation to add a statement to initialize current_column_letter with 'A'.
+#In the outer loop's body, define the inner for loop to iterate through each column of the theater. 
+#Use the loop variable current_column and iterate num_columns times, starting with integer 1.
+num_rows = int(input("Enter the number of rows: "))
+num_columns = int(input("Enter the number of colums: "))
+
+for current_row in range(1,num_rows+1):
+    current_column_letter='A'
+    for current_colum in range(1,num_columns+1):
+        # Inner for loop statements
+        print(f'{current_row}{current_column_letter}', end=' ')
+        current_column_letter = chr(ord(current_column_letter) + 1)  # Used to increment letters
+    print()'''
+
+'''#nested loop 1
+#Integers first_range and second_range are read from input. 
+#The outer while loop executes first_range times. 
+#Complete the inner while loop to execute (second_range + 1) times for each iteration of the outer while loop.
+first_range = int(input())
+second_range = int(input())
+
+count = 0
+i = 0
+while i < first_range:
+    j = 0
+    while j<second_range+1:
+        count += 1
+        j += 1
+    i += 1
+
+print(f'Inner loop ran {count} times')'''
+
+'''#nested loop 2
+#Integers first_range and second_range are read from input. 
+#The inner for loop executes (second_range + 1) times for each iteration of the outer for loop. 
+#Complete the outer for loop to execute first_range times.
+first_range = int(input())
+second_range = int(input())
+
+count = 0
+for i in range(first_range):
+    for j in range(second_range + 1):
+        count += 1
+
+print(f'Inner loop ran {count} times')'''
+
+'''#nested loop 3
+#Integers initial_value and final_value are read from input. 
+#For each number from initial_value to final_value both inclusive, 
+#output the number's value of dash characters ('-').
+initial_value = int(input())
+final_value = int(input())
+
+for x in range(initial_value,final_value+1):
+    print(x*'-')'''
+
+'''#nested loop 4
+#On Taj's farm, each plot of land is labeled with a letter followed by an integer.
+#Given integers num_rows and num_columns, output the label for each plot of land, followed by a space. End each row with a newline.
+#Rows are in alphabetical order. Plots of land in the first row all start with the letter A.
+#Columns are in ascending order. Plots of land in the first column all end with the integer 1.
+num_rows = int(input())
+num_columns = int(input())
+row_letter='A'
+
+for row in range(1,num_rows+1):    
+    for column in range(1,num_columns+1):
+        print(f'{row_letter}{column}',end=' ')
+    print()
+    row_letter=chr(ord(row_letter)+1)
+'''
+
+
+
 
