@@ -2263,6 +2263,35 @@ for row in range(1,num_rows+1):
     row_letter=chr(ord(row_letter)+1)
 '''
 
+'''#break and continue statements
+threshold = int(input())
 
+for a in range(0, 3):
+    print(a + 1, end=": ")
 
+    for b in range(0, 1):
+        if a > threshold:
+            print("_,", end="")
+            continue
 
+        print(b, end=",")
+
+    print()'''
+
+#break and continue statements 1
+#"Simon Says" is a memory game where "Simon" outputs a sequence of 10 characters (R, G, B, Y) and the user must repeat the sequence. 
+# Create a for loop that compares each character of the two strings. For each matching character, add one point to user_score. 
+# Upon a mismatch, end the loop.
+#Sample output with inputs: 'RRGBRYYBGY' 'RRGBBRYBGY'
+
+simon_pattern = input()
+user_pattern = input()
+user_score = 0
+
+for i in range(len(simon_pattern)):
+    if simon_pattern[i] == user_pattern[i]:
+        user_score += 1
+    else:
+        break
+
+print('User score:', user_score)
