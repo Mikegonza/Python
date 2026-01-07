@@ -2276,9 +2276,10 @@ for a in range(0, 3):
 
         print(b, end=",")
 
-    print()'''
+    print()
+'''
 
-#break and continue statements 1
+'''#break and continue statements 1
 #"Simon Says" is a memory game where "Simon" outputs a sequence of 10 characters (R, G, B, Y) and the user must repeat the sequence. 
 # Create a for loop that compares each character of the two strings. For each matching character, add one point to user_score. 
 # Upon a mismatch, end the loop.
@@ -2295,3 +2296,50 @@ for i in range(len(simon_pattern)):
         break
 
 print('User score:', user_score)
+'''
+
+'''#Getting both index and value when looping: enumerate()
+#Integer num_applicants is read from input, representing the number of applicant names to be read from input. 
+# List applicant_eligibilities contains the applicant names read from the remaining input. For each element in applicant_eligibilities, output:
+#'Name: '
+#the element
+#', Position: '
+#the element's index in the list plus one
+num_applicants = int(input())
+
+applicant_eligibilities = []
+for i in range(num_applicants):
+    applicant_eligibilities.append(input())
+
+for (index,name) in enumerate(applicant_eligibilities):
+    print(f'Name: {name}, Position: {index+1}')
+'''
+
+'''#Getting both index and value when looping: enumerate() 2
+#Integer samples_count is read from input, representing the number of data samples to be read from input. 
+#List values_list contains the data samples read from the remaining input. For each element in values_list:
+#If the element is greater than or equal to 50, output 'Sample ' followed by the element's index in the list and ' needs attention'.
+#Otherwise, output 'Sample ' followed by the element's index in the list and ' is ok'.
+#Ex: If the input is:
+#3
+#50
+#20
+#90
+#then the output is:
+#Sample 0 needs attention
+#Sample 1 is ok
+#Sample 2 needs attention
+
+samples_count = int(input())
+
+values_list = []
+for i in range(samples_count):
+    values_list.append(int(input()))
+
+for (index,value) in enumerate(values_list):
+    if value >=50:
+        print(f'Sample {index} needs attention')
+    else:
+        print(f'Sample {index} is ok')
+'''
+
