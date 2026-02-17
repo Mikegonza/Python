@@ -615,23 +615,6 @@ while command != '4':  # Exit when user enters '4'
     command = input().lower().strip()
 '''
 
-'''swap elements
-#Write a function swap that swaps the first and last elements of a list argument.
-
-#Sample output with input: 'all,good,things,must,end,here'
-#['here', 'good', 'things', 'must', 'end', 'all']
-def swap(lst):
-    lst=lst[-1]
-    print(lst)
-    print(lst[0:])
-
-
-values_list = input().split(',')  # Program receives comma-separated values like 5,4,12,19
-swap(values_list)
-
-print(values_list)
-'''
-
 '''rounding and math
 # import math
 # help(math.pow)  # Display the documentation for the math module
@@ -2571,5 +2554,29 @@ while command != '4':  # Exit when user enters '4'
     command = input().lower().strip()
 '''
 
+'''#balance_on_card and receipt_amount are read from input. 
+# estimate_balance() has two parameters current_balance and total_cost, and outputs the difference of current_balance and total_cost. 
+# Call estimate_balance() to output the difference of balance_on_card and receipt_amount without modifying balance_on_card.
+def estimate_balance(current_balance, total_cost):
+    print(f'Predicted balance: {current_balance - total_cost:.2f}')
 
+balance_on_card = float(input())
+receipt_amount = float(input())
+
+estimate_balance(balance_on_card, receipt_amount)
+print(f'Current balance: {balance_on_card}')
+'''
+
+'''#Write a function swap() that swaps the first and fourth elements of a list parameter.
+def swap(lst):
+    #Traditional way to swap values using a temp variable
+    temp= lst[0]
+    lst[0]=lst[3]
+    lst[3]=temp
+    #The cleanest option using tuple unpacking
+    #my_list[0], my_list[3] = my_list[3], my_list[0]   
+num_list = input().split()
+swap(num_list)
+print(num_list)
+'''
 
