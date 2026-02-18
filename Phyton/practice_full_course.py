@@ -2580,3 +2580,82 @@ swap(num_list)
 print(num_list)
 '''
 
+'''#Keyword arguments and default parameter values
+#Given that 1 dollar = 100 pennies, write a function number_of_pennies() that takes two arguments: 
+#the number of dollars, and an optional number of pennies. number_of_pennies() should return the total number of pennies.
+# The code reads three values from input and calls number_of_pennies() twice.
+# Ex: If the input is 5 6 4, number_of_pennies() is first called with arguments 5 and 6, representing $5.06, and then number_of_pennies() is only called with argument 4, representing $4.00.
+#Then the output is:
+#506
+#400
+def number_of_pennies(dollars,pennies=0):
+    return dollars*100+pennies
+    
+
+print(number_of_pennies(int(input()), int(input()))) # Both dollars and pennies
+print(number_of_pennies(int(input())))               # Dollars only
+'''
+
+'''#Write a split_check function that returns the amount that each diner must pay to cover the cost of the meal.
+#The function has four parameters:
+#bill: The amount of the bill.
+#people: The number of diners to split the bill between.
+#tax_percentage: The extra tax percentage to add to the bill.
+#tip_percentage: The extra tip percentage to add to the bill.
+#The tax or tip percentages are optional and may not be given when calling split_check. Use default parameter values of 0.15 (15%) for tip_percentage, and 0.09 (9%) for tax_percentage. Assume that the tip is calculated from the amount of the bill before tax.
+#Sample output with inputs: 25 2
+#Cost per diner: $15.50
+#Sample output with inputs: 100 2 0.075 0.21
+#Cost per diner: $64.25
+# FIXME: Write the split_check function. HINT: Calculate the amount of tip and tax,
+# add to the bill total, then divide by the number of diners.
+
+def split_check(bill, people, tax_percentage=0.09,tip_percentage=0.15):
+    tip=bill*tip_percentage
+    tax=bill*tax_percentage
+    total=bill+tip+tax
+    return total/people
+    
+
+bill = float(input())
+people = int(input())
+
+# Cost per diner at the default tax and tip percentages
+print(f'Cost per diner: ${split_check(bill, people):.2f}')
+
+bill = float(input())
+people = int(input())
+new_tax_percentage = float(input())
+new_tip_percentage = float(input())
+
+# Cost per diner at different tax and tip percentages
+print(f'Cost per diner: ${split_check(bill, people, new_tax_percentage, new_tip_percentage):.2f}')
+'''
+
+'''#Write a function driving_cost() with parameters miles_per_gallon, dollars_per_gallon, and miles_driven, that returns the dollar cost to drive those miles. 
+# All items are of type float. 
+#The function called with arguments (20.0, 3.1599, 50.0) returns 7.89975.
+# The main program's inputs are the car's miles per gallon and the price of gas in dollars per gallon (both float). 
+#Output the gas cost for 10 miles, 50 miles, and 400 miles, by calling your driving_cost() function three times.
+# Output each floating-point value with two digits after the decimal point, which can be achieved as follows:
+#print(f'{your_value:.2f}')
+#Ex: If the input is:
+#20.0
+#3.1599
+#the output is:
+#1.58
+#7.90
+#63.20
+# Define your function here.
+def driving_cost(miles_per_gallon,dollars_per_gallon,miles_driven):
+    gallons_used=miles_driven/miles_per_gallon
+    return gallons_used*dollars_per_gallon
+
+if __name__ == '__main__':
+    # Type your code here.
+    miles_per_gallon=float(input())
+    dollar_per_gallon=float(input())
+    print(f'{driving_cost(miles_per_gallon,dollar_per_gallon,10.0):.2f}')
+    print(f'{driving_cost(miles_per_gallon,dollar_per_gallon,50.0):.2f}')
+    print(f'{driving_cost(miles_per_gallon,dollar_per_gallon,400.0):.2f}')
+'''
