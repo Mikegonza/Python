@@ -54,3 +54,4 @@ print('-' * 50)
 print(f'{"Sadio Mane":16}{"22":8}{5:6}')
 
 print(f'{"Gabriel Jesus":16}{"7":8}{6:6}')
+print()
