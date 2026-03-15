@@ -68,3 +68,88 @@
 # for i in range(5,n+1,5):
 #     count+=1
 #  print(count)
+# color_name = input()
+
+# ''' Your code goes here '''
+# print(f'{color_name:=^16}')
+# print(f'{color_name:=>16}')
+
+# location_size = float(input())
+
+# ''' Your code goes here '''
+# print(f'{location_size:.4f} acres')
+
+# plants = input().split()
+# planted = input().split()
+# separator_char = input()
+
+# ''' Your code goes here '''
+# print(f'{"Plants":^18}|{"Planted":^18}')
+# print(f'{separator_char*36:36}')
+# print(f'{plants[0]:^18}|{planted[0]:^18}')
+# print(f'{plants[1]:^18}|{planted[1]:^18}')
+# print(f'{plants[2]:^18}|{planted[2]:^18}')
+
+# word = 'onomatopoeia'
+# num_guesses = 10
+
+# hidden_word = '-' * len(word)
+
+# guess = 1
+
+# while guess <= num_guesses and '-' in hidden_word:
+#     print(hidden_word)
+#     user_input = input(f'Enter a character (guess #{guess}): ')
+    
+#     if len(user_input) == 1:
+#         # Count the number of times the character occurs in the word
+#         num_occurrences = word.count(user_input)
+    
+#         # Replace the appropriate position(s) in hidden_word with the actual character.
+#         position = -1
+#         for occurrence in range(num_occurrences):
+#             position = word.find(user_input, position+1)  # Find the position of the next occurrence
+#             hidden_word = hidden_word[:position] + user_input + hidden_word[position+1:]  # Rebuild the hidden word string
+    
+#         guess += 1
+        
+# if not '-' in hidden_word:
+#     print('Winner!', end=' ')        
+# else:
+#     print('Loser!', end=' ')
+
+# print(f'The word was {word}.')
+
+# target = input()
+# string_twister = input()
+
+# """ Your code goes here """
+# if target in string_twister:
+#     print("Found at:",string_twister.find(target))
+#     print(string_twister.replace(target,"--",2))
+# else:
+#     print("None found")
+
+# superhero1 = input()
+# superhero2 = input()
+
+# """ Your code goes here """
+# if superhero2 < superhero1:
+#     print(superhero2)
+# elif superhero1 < superhero2:
+#     print(superhero1)
+# else:
+#     print("Same ASCII values")
+
+# 
+
+# user_entry = input()
+
+# """ Your code goes here """
+# user_entry = user_entry.strip()
+# if "Course:" in user_entry:
+#     user_entry = user_entry.lower()
+# else:
+#     user_entry = user_entry.capitalize()
+
+# print(user_entry)
