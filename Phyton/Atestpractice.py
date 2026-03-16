@@ -153,3 +153,39 @@
 #     user_entry = user_entry.capitalize()
 
 # print(user_entry)
+# file = 'C:/Users/Charles Xavier//Documents//report.doc'
+
+# separator = '/'
+# results = file.split(separator)
+# print(f'Separator ({separator}): {results}')
+
+# key_value = input()
+
+# tokens_list = key_value.split(" = ")
+
+# print(tokens_list)
+
+# beverage_names = input()
+# insert_index = int(input())
+
+# """ Your code goes here """
+# beverage_list = beverage_names.split()
+# beverage_list.insert(insert_index, "seltzer")
+
+# print(beverage_list)
+
+# sues_list = input().split()
+
+# """ Your code goes here """
+# color_choices = " / ".join(sues_list)
+
+# print(f"Sue's colors: {color_choices}")
+
+# Complete the function to print the first X number of characters in the given string
+def printFirst(mystring, x):
+    print()
+# expected output: WGU
+printFirst('WGU College of IT', 3)    
+ 
+# expected output: WGU College
+printFirst('WGU College of IT', 11)
