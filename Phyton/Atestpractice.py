@@ -182,10 +182,21 @@
 # print(f"Sue's colors: {color_choices}")
 
 # Complete the function to print the first X number of characters in the given string
-def printFirst(mystring, x):
-    print()
-# expected output: WGU
-printFirst('WGU College of IT', 3)    
- 
-# expected output: WGU College
-printFirst('WGU College of IT', 11)
+# def printFirst(mystring, x):
+#     print()
+# # expected output: WGU
+# printFirst('WGU College of IT', 3)    
+# # expected output: WGU College
+# printFirst('WGU College of IT', 11)
+
+# user_input = input()
+
+# char,phrase = user_input.split(' ',1)
+
+# count = phrase.count(char)
+
+# if count == 1:
+#     print(f"{count} {char}")
+# else:
+#     print(f"{count} {char}'s")
+
