@@ -200,3 +200,17 @@
 # else:
 #     print(f"{count} {char}'s")
 
+# n = int(input())
+# cashier_line = input().split()
+
+# ''' Your code goes here '''
+# if n == 1:
+#     suffix = 'st'
+# elif n == 2:
+#     suffix = 'nd'
+# elif n == 3:
+#     suffix = 'rd'
+# else:
+#     suffix = 'th'
+
+# print(f'The {str(n)}{suffix} customer is {cashier_line[n - 1]}.')
